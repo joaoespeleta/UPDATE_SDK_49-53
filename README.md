@@ -1,141 +1,85 @@
-# firebasechat
+# 📱 Chat App com React Native + Firebase
 
-Uma aplicação móvel desenvolvida com React Native, Expo, Firebase e NativeWind.
+Este é um aplicativo de **chat em tempo real** desenvolvido com **React Native (Expo)** e integração com **Firebase**. A aplicação permite o cadastro e login de usuários, além da troca de mensagens em tempo real entre os usuários.
 
-## Tecnologias Utilizadas
-
-- **React Native** - Framework para desenvolvimento mobile
-- **Expo** - Plataforma para desenvolvimento React Native
-- **Firebase** - Backend as a Service (autenticação, banco de dados, storage)
-- **NativeWind** - Framework CSS utilitário para React Native
-
-## Pré-requisitos
-
-Antes de começar, certifique-se de ter instalado em sua máquina:
-
-- [Node.js](https://nodejs.org/) (versão 16 ou superior)
-- [npm](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/)
-- [Expo CLI](https://docs.expo.dev/get-started/installation/)
-
-```bash
-npm install -g @expo/cli
-```
-
-## Instalação
-
-1. **Clone o repositório**
-```bash
-git clone https://github.com/seu-usuario/nome-do-projeto.git
-cd nome-do-projeto
-```
-
-2. **Instale as dependências**
-```bash
-npm install
-# ou
-yarn install
-```
-
-3. **Instale as dependências específicas do projeto**
-
-### Firebase
-```bash
-npm install firebase
-# ou
-yarn add firebase
-```
-
-### NativeWind
-```bash
-npm install nativewind
-npm install --save-dev tailwindcss@3.3.2
-# ou
-yarn add nativewind
-yarn add --dev tailwindcss@3.3.2
-```
-
-### Dependências adicionais do Expo
-```bash
-npx expo install expo-dev-client
-# ou outras dependências específicas do seu projeto
-```
-
-## Configuração
-
-### Firebase
-1. Crie um projeto no [Firebase Console](https://console.firebase.google.com/)
-2. Adicione uma aplicação web ao seu projeto
-3. Copie as credenciais de configuração
-4. Crie um arquivo `.env` na raiz do projeto:
-
-```env
-EXPO_PUBLIC_FIREBASE_API_KEY=sua_api_key
-EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN=seu_projeto.firebaseapp.com
-EXPO_PUBLIC_FIREBASE_PROJECT_ID=seu_projeto_id
-EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET=seu_projeto.appspot.com
-EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=123456789
-EXPO_PUBLIC_FIREBASE_APP_ID=1:123456789:web:abcdef
-```
-
-### NativeWind
-Certifique-se de que o arquivo `tailwind.config.js` está configurado:
-
-```javascript
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./App.{js,jsx,ts,tsx}", "./src/**/*.{js,jsx,ts,tsx}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-```
-
-## Executando o projeto
-
-1. **Inicie o servidor de desenvolvimento**
-```bash
-npx expo start
-# ou
-yarn expo start
-```
-
-2. **Execute no dispositivo/emulador**
-- Para Android: Pressione `a` no terminal ou escaneie o QR code com o app Expo Go
-- Para iOS: Pressione `i` no terminal ou escaneie o QR code com a câmera do iPhone
-
-## Estrutura do Projeto
-
-```
-projeto/
-├── src/
-│   ├── components/     # Componentes reutilizáveis
-│   ├── app(app)/       # Telas da aplicação
-│   ├── utils/          # Funções utilitárias
-├── assets/             # Imagens e recursos
-├── .env                # Variáveis de ambiente
-├── app.json            # Configuração do Expo
-├── babel.config.js     # Configuração do Babel
-├── tailwind.config.js  # Configuração do TailwindCSS
-└── package.json        # Dependências do projeto
-```
-
-## Funcionalidades Firebase
-
-- **Autenticação**: Login/registro de usuários
-- **Firestore**: Banco de dados NoSQL
-
-## Estilização com NativeWind
-
-Este projeto utiliza NativeWind para estilização, que permite usar classes do Tailwind CSS diretamente nos componentes React Native:
-
-```jsx
-<View className="flex-1 justify-center items-center bg-blue-500">
-  <Text className="text-white text-xl font-bold">
-    Hello NativeWind!
-  </Text>
-</View>
-```
 ---
 
-**Qualquer dúvida entre em contato pelo Teams** 
+## 🚀 Tecnologias Utilizadas
+
+* **React Native (Expo)**
+* **Firebase Authentication**
+* **Firebase Firestore**
+* **React Navigation**
+* **Expo SDK 53** (atualizado a partir do SDK 49)
+
+---
+
+## 💠 Instalação e Execução
+
+> ⚠️ Após a atualização do Expo SDK, é necessário instalar com `--force` para garantir compatibilidade.
+
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+
+# Instale as dependências
+npm install --force
+
+# Inicie o projeto
+npx expo start
+```
+
+> Certifique-se de ter o aplicativo **Expo Go** instalado no seu smartphone para escanear o QR code gerado e testar o app.
+
+---
+
+## 🔐 Configuração do Firebase
+
+Antes de executar o app, adicione seu arquivo de configuração do Firebase:
+
+1. Acesse o [console do Firebase](https://console.firebase.google.com/)
+2. Crie um projeto
+3. Ative o **Authentication** com o método **Email/Senha**
+4. Crie um banco de dados **Firestore**
+5. No seu projeto, crie o arquivo `firebaseConfig.js` e adicione as informações da sua conta Firebase:
+
+```js
+// firebaseConfig.js
+export const firebaseConfig = {
+  apiKey: "SUA_API_KEY",
+  authDomain: "SEU_DOMINIO.firebaseapp.com",
+  projectId: "SEU_PROJECT_ID",
+  storageBucket: "SEU_BUCKET.appspot.com",
+  messagingSenderId: "SEU_MESSAGING_SENDER_ID",
+  appId: "SEU_APP_ID"
+};
+```
+
+---
+
+## 🖼️ Capturas de Tela
+
+### 📲 Tela de Login
+
+![Tela de Login](./assets/screens/login.png)
+
+### 🆕 Tela de Cadastro
+
+![Tela de Cadastro](./assets/screens/signup.png)
+
+### 💬 Tela de Chat
+
+![Tela de Chat](./assets/screens/chat.png)
+
+---
+
+## 📌 Funcionalidades
+
+* [x] Cadastro de usuário com e-mail e senha
+* [x] Autenticação via Firebase
+* [x] Envio e recebimento de mensagens em tempo real
+* [x] Armazenamento no Firestore
+* [x] Atualização do Expo SDK para a versão 53
+
+---

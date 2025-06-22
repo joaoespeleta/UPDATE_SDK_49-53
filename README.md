@@ -62,15 +62,15 @@ export const firebaseConfig = {
 
 ### 📲 Tela de Login
 
-![Tela de Login](./assets/screens/login.png)
+![Tela de Login](./assets/screens/login.jpg)
 
 ### 🆕 Tela de Cadastro
 
-![Tela de Cadastro](./assets/screens/signup.png)
+![Tela de Cadastro](./assets/screens/signup.jpg)
 
 ### 💬 Tela de Chat
 
-![Tela de Chat](./assets/screens/chat.png)
+![Tela de Chat](./assets/screens/chat.jpg)
 
 ---
 

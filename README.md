@@ -60,17 +60,14 @@ export const firebaseConfig = {
 
 ## 🖼️ Capturas de Tela
 
-### 📲 Tela de Login
+<h3>📲 Tela de Login</h3>
+<img src="./assets/screens/login.jpg" alt="Tela de Login" width="300"/>
 
-![Tela de Login](./assets/screens/login.jpg)
+<h3>🆕 Tela de Cadastro</h3>
+<img src="./assets/screens/signup.jpg" alt="Tela de Cadastro" width="300"/>
 
-### 🆕 Tela de Cadastro
-
-![Tela de Cadastro](./assets/screens/signup.jpg)
-
-### 💬 Tela de Chat
-
-![Tela de Chat](./assets/screens/chat.jpg)
+<h3>💬 Tela de Chat</h3>
+<img src="./assets/screens/chat.jpg" alt="Tela de Chat" width="300"/>
 
 ---
 
